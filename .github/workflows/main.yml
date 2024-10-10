@@ -59,7 +59,7 @@ jobs:
           fi
           
           # 새 버전 실행
-          cd /home/ubuntu/app
+          cd /home/ubuntu/app/build/libs
           nohup java -jar cicd-test-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
           echo "Application started"
         command_timeout: 200m
