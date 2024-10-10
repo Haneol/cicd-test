@@ -32,6 +32,7 @@ jobs:
         source: "build/libs/*.jar"
         target: "/home/ubuntu/app"
         debug: true
+        scp_options: -o StrictHostKeyChecking=no
 
     - name: Deploy to server
       uses: appleboy/ssh-action@master
@@ -51,3 +52,7 @@ jobs:
           cd /home/ubuntu/app
           nohup java -jar cicd-test-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
           echo "Application started"
+        command_timeout: 200m
+        script_stop: true
+        debug: true
+        ssh_options: -o StrictHostKeyChecking=no
