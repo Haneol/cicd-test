@@ -23,7 +23,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
-        script: echo "Connection successful"
+        script: echo "Connection successful ${{ secrets.USERNAME }}"
         debug: true
         
     - name: Grant execute permission for gradlew
