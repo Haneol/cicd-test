@@ -62,7 +62,3 @@ jobs:
           cd /home/ubuntu/app/build/libs
           nohup java -jar cicd-test-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
           echo "Application started"
-        command_timeout: 200m
-        script_stop: true
-        debug: true
-        ssh_options: -o StrictHostKeyChecking=no
